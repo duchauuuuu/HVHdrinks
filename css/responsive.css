@@ -44,7 +44,7 @@
   }
   .search {
     position: absolute;
-    left: 30%;
+    left: 425px;
     bottom: 22px;
   }
   .logo {
@@ -334,7 +334,7 @@ footer .box {
   }
   .header .main-content .login .btn {
     position: absolute;
-    left: 215px;
+    left: 40%;
     width: 120px;
     bottom: -38px;
   }
