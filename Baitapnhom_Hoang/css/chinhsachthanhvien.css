@@ -1,0 +1,357 @@
+body {
+  padding-top: 140px; 
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 60px; 
+}
+
+header img {
+  max-height: 40px;
+}
+
+header input[type="search"] {
+  margin-right: 10px;
+}
+
+header button {
+  margin-left: 10px;
+}
+
+header .btn-cart {
+  margin-left: 5px; 
+  padding: 5px 10px; 
+}
+
+header .btn-cart .fa-shopping-cart {
+  margin-right: 5px; 
+}
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 95%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  border-top: 1px solid #aaaaaa;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+
+.modal-footer > :not(:first-child) {
+  margin-left: .25rem;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: all .2s ease-in-out;
+}
+
+.btn-secondary {
+  color: #f9ef27;
+  background-color: #12f3fb;
+  border-color: #ccc;
+}
+
+.btn-primary {
+  color: #f9ef27;
+  background-color: #12f3fb;
+  border-color: #ccc;
+}
+
+.modal-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 1rem;
+}
+
+h5.modal-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+
+#cart {
+  font-size: 15px;
+  color: #fff;
+  background: #c7b200;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  margin-left: 1rem;
+  padding: 12px;
+  cursor: pointer;
+}
+
+#cart:hover {
+  border-color: #fff;
+}
+.footer {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer .column {
+  margin-bottom: 20px;
+}
+.footer .social-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.footer .social-icons li {
+  padding: 0 10px;
+}
+.footer .social-icons li a {
+  color: white;
+  font-size: 24px; 
+}
+#navbarSupportedContent a {
+  font-size: 17px;
+}
+
+/* Navbar styles */
+.navbar-custom {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 60px; 
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 999; 
+}
+
+.navbar-custom .nav-item {
+  padding: 0px 10px;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active-category {
+  color: white !important; 
+  border-radius: 5px; 
+  font-weight: bold;   
+}
+
+/* Dropdown styles */
+.navbar-custom .dropdown:hover .dropdown-menu,
+.navbar-custom .dropdown .dropdown-menu.show {
+  display: block;
+}
+
+.navbar-custom .dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+}
+
+.navbar-custom .dropdown-menu .dropdown-item:hover {
+  color: white !important; 
+  background-color: transparent;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Search styles */
+.navbar-custom .form-control {
+  background: url("../img/search.svg") no-repeat right 10px center;
+  background-size: 20px;
+  padding-right: 30px;
+  border-radius: 5px; 
+}
+
+#page-heading {
+  background-image: url("../img/bg-qua-trinh-phat-trien.jpg");
+  background-size: cover;
+  background-position: center;
+  color: black;
+  margin-bottom: 20px;
+  height: 300px;
+}
+#page-heading h2 {
+  font-size: 50px;
+  font-weight: 600px;
+  transform: uppercase;
+  padding-top: 100px;
+}
+
+.row{
+  margin-bottom: 40px;
+}
+h3 {
+  font-family:'Times New Roman', serif ;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  h3 {
+    font-size: 1.5em; 
+    color: #f00; 
+  }
+}
+.col-md-8 {
+  background-color: #f2f2f2;
+  
+}
+
+/* Footer styles */
+.footer {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer .column {
+  margin-bottom: 20px;
+}
+.footer .social-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.footer .social-icons li {
+  padding: 0 10px;
+}
+.footer .social-icons li a {
+  color: white;
+  font-size: 24px; 
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px; 
+  height: 50px;
+  background-color: #a02525; 
+  color: white; 
+  border: none; 
+  border-radius: 0; 
+  cursor: pointer; 
+}
+
+#scrollToTopBtn::after {
+  content: "^";
+  font-size: 30px; 
+}
+
+.loader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  transition: opacity 1s, visibility 1s ;
+  z-index: 9999
+}
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after{
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-image: url(../../img/img_loading.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  /* border: 15px solid #66ceff; */
+  /* border-top-color:#b81f32 ; */
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+}
+@keyframes loading{
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+}

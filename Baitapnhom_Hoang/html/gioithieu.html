@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVH Drinks - Giới thiệu</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/gioithieu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<body>
+    <div class="loader" style="width: 100%;"><p style="position: absolute; z-index: 1111;">Đang loading</p></div>
+    <!-- Header -->
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <form class="d-flex" style="position: relative;">
+            <input class="form-control me-2" type="text" placeholder="search" aria-label="Tìm kiếm">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="login">
+            <a href="../../RegularException/html/Index.html"><button class="btn btn-outline-light">Đăng nhập</button></a>
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            
+            <div id="myModal" class="modal modal-lg" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+    
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary "><a href="../../RegularException/html/Checkout.html">Thanh Toán</a></button>
+                    </div>
+                </div>
+            </div>
+            
+    
+        </div>
+    </header>
+    
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-custom bg-warning">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mx-5 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" aria-current="page" href="../../html_duchau/home.html" id="showloader">Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-dark" href="../html/thucuong.html" id="showloader">Drinks</a></li>
+                            <li><a class="dropdown-item text-dark" href="../html/bakery.html" id="showloader">Bakery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tin tức & sự kiện
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-dark" href="../../html_duchau/tintuc.html" id="showloader">Tin tức khuyến mãi</a></li>
+                            <li><a class="dropdown-item text-dark" href="../../html_duchau/sukien.html" id="showloader">Sự kiện</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../../html_duchau/tuyendung.html" id="showloader">Tuyển dụng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/gioithieu.html" id="showloader">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/chinhsachthanhvien.html" id="showloader">Chính sách thành viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/chinhsachbaomatthongtin.html" id="showloader">Chính sách bảo mật thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../../RegularException/html/Contact.html" id="showloader">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-heading" class="text-dark px-5">
+        <div class="container">
+            <h2>Thức uống</h2>
+            <p>Giới thiệu thức uống hấp dẫn và đa dạng</p>
+        </div>
+    </div>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-3" style="background: #b91f32; color: #FFF;">
+            <li class="breadcrumb-item">
+                <a href="../../html_duchau/home.html" class="text-white" style="text-decoration: none;">
+                    <i class="fas fa-home"></i> Trang Chủ
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Thức uống
+            </li>
+        </ol>
+    </nav>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-danger">CÂU CHUYỆN THƯƠNG HIỆU</h2>
+                <p class="text-justify">Tên gọi HVH Drinks có nguồn gốc từ ý nghĩa trong tiếng Anh là "Healthy and Vibrant Hydration". Nó thể hiện cam kết của chúng tôi đối với việc cung cấp những loại đồ uống lành mạnh và đầy năng lượng cho mọi người. Tại HVH Drinks, chúng tôi tin rằng sức khỏe và sự phấn đấu không ngừng nên được kết hợp trong mỗi giọt nước uống.
+                    Bắt nguồn từ niềm đam mê với sự phát triển và chăm sóc sức khỏe, HVH Drinks đã ra đời vào năm 2010 tại Việt Nam. Từ một cửa hàng nhỏ, chúng tôi đã nhanh chóng mở rộng mạng lưới của mình và trở thành một trong những thương hiệu đồ uống hàng đầu trên thị trường.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="../img/lytra-350x441.png" class="img-fluid" alt="Gong Cha">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-danger">HVH Drinks VIỆT NAM</h2>
+                <p class="text-justify">Thương hiệu HVH Drinks được công ty TNHH Golden Trust chính thức đưa vào hoạt động tại thị trường Việt Nam từ ngày 20/3/2024. Trải qua hơn năm năm hoạt động, công ty TNHH Golden Trust – đơn vị nhượng quyền độc quyền của HVH Drinks tại Việt Nam, đã đưa thương hiệu phát triển nhanh chóng và trở thành một trong những điểm đến thân thuộc của các bạn trẻ yêu thích văn hóa trà sữa và mong muốn trải nghiệm sản phẩm trà uy tín chất lượng với nguồn gốc xuất xứ rõ ràng.</p>
+            </div>
+
+            <div class="col-md-6">
+                <img src="../img/Hình-CH.jpg" class="img-fluid" alt="Gong Cha Việt Nam">
+            </div>
+        </div>
+
+        <div class="row" style="background-color: rgb(224, 208, 188)">
+            <div class="col-md-12">
+                <h2 class="text-danger text-center">GIÁ TRỊ CỐT LÕI</h2>
+            </div>
+           
+            <div class="col-md-4">
+                <img src="../img/icon1.png" alt="">
+                <h3 class="text-danger">1. Chất lượng hàng đầu</h3>
+                <p>An toàn, vệ sinh và ngon miệng. Việc sử dụng các nguyên liệu an toàn, tự nhiên và vệ sinh là ưu tiên hàng đầu của Gong Cha. Hương vị tuyệt hảo của các món thức uống là mục đích quan trọng tiếp theo mà chúng tôi muốn hướng đến.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="../img/icon2.png" alt="">
+                <h3 class="text-danger">2. Dịch vụ thân thiện & chuyên nghiệp</h3>
+                <p>HVH Drinks mong muốn làm hài lòng khách hàng tốt nhất với tác phong phục vụ chuyên nghiệp và thân thiện, luôn lắng nghe những đóng góp của khách hàng.</p>        
+            </div>
+            <div class="col-md-4">
+                <img src="../img/icon1.png" alt="">
+                <h3 class="text-danger">3. Thương hiệu đáng tin cậy</h3>
+                <p>Dựa trên hai nền tảng cốt lõi là Chất Lượng và Dịch Vụ, HVH Drinks luôn nỗ lực xây dựng và duy trì hình ảnh thương hiệu đáng tin cậy trong mắt khách hàng.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="text-danger">QUÁ TRÌNH PHÁT TRIỂN</h3>
+            </div>
+            <div class="col-md-12">
+                <p>Qua quá trình hoạt động công ty TNHH Golden Trust - đơn vị nhượng quyền độc quyền của HVH Drinks tại Việt Nam, đã đưa thương hiệu phát triển nhanh chóng trở thành một trong những điểm đến thân thuộc của các bạn trẻ yêu thích văn hóa trà sữa.</p>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="column">
+                <h5>Giới thiệu</h5>
+                <p>Về Chúng Tôi</p>
+                <p>Sản phẩm</p>
+                <p>Khuyến mãi</p>
+                <p>Tuyển dụng</p>
+            </div>
+            <div class="column">
+                <h5>Điều khoản</h5>
+                <p>Điều khoản sử dụng</p>
+                <p>Chính sách bảo mật thông tin</p>
+                <p>Hướng dẫn xuất hóa đơn GTGT</p>
+                
+            </div>
+            <div class="column">
+                <h5>Liên hệ</h5>
+                <p>Đặt hàng: 0786012569</p>
+                <p>Tầng 1-3 HVH drinks</p>
+                <p>12 Nguyễn Văn Bảo, P.4,</p>
+                <p>Gò vấp, Thành phố Hồ Chí Minh</p>
+            </div>
+            <div class="column">
+                <h5>HVH Drinks</h5>
+                <ul class="social-icons">
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="btn" onclick="scrollToTop()"></button>
+        
+    <script src="../js/scrollToTop.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../../js/loader.js"></script>
+</body>
+</html>

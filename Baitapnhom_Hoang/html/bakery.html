@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/bakery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="../js/scrollToTop.js"></script>
+    <title>Bakery</title>
+</head>
+<body>
+    <div class="loader" style="width: 100%;"><p style="position: absolute; z-index: 1111;">Đang loading</p></div>
+    <!-- Header -->
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <form class="d-flex" style="position: relative;">
+            <input class="form-control me-2" type="text" placeholder="search" aria-label="Tìm kiếm">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="login">
+            <a href="../../RegularException/html/Index.html"><button class="btn btn-outline-light">Đăng nhập</button></a>
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            
+            <div id="myModal" class="modal modal-lg" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+    
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary "><a href="../../RegularException/html/Checkout.html">Thanh Toán</a></button>
+                    </div>
+                </div>
+            </div>
+            
+    
+        </div>
+    </header>
+    
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-custom bg-warning">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mx-5 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" aria-current="page" href="../../html_duchau/home.html" id="showloader">Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-dark" href="../html/thucuong.html" id="showloader">Drinks</a></li>
+                            <li><a class="dropdown-item text-dark" href="../html/bakery.html" id="showloader">Bakery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tin tức & sự kiện
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-dark" href="../../html_duchau/tintuc.html" id="showloader">Tin tức khuyến mãi</a></li>
+                            <li><a class="dropdown-item text-dark" href="../../html_duchau/sukien.html" id="showloader">Sự kiện</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../../html_duchau/tuyendung.html" id="showloader">Tuyển dụng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/gioithieu.html" id="showloader">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/chinhsachthanhvien.html" id="showloader">Chính sách thành viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/chinhsachbaomatthongtin.html" id="showloader">Chính sách bảo mật thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../../RegularException/html/Contact.html" id="showloader">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-heading" class="text-dark px-5">
+        <div class="container">
+            <h2>Thức uống</h2>
+            <p>Giới thiệu thức uống hấp dẫn và đa dạng</p>
+        </div>
+    </div>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-3" style="background: #b91f32; color: #FFF;">
+            <li class="breadcrumb-item">
+                <a href="../../html_duchau/home.html" class="text-white" style="text-decoration: none;">
+                    <i class="fas fa-home"></i> Trang Chủ
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Thức uống
+            </li>
+        </ol>
+    </nav>
+    
+    <main>
+        <div class="container text-center pt-4">
+            <h2 class="text-success fw-bold">THỨC UỐNG</h2>
+            <img src="../img/icon_tealeaves.png" alt="">
+            <ul class="nav nav-pills justify-content-center py-3">
+                <li class="nav-item">
+                    <a class="nav-link category-link" href="../html/thucuong.html" id="showloader">THỨC UỐNG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link category-link active-category" href="../html/bakery.html" id="showloader">BAKERY</a>
+                </li>
+            </ul>
+        </div>
+
+        <section class="container py-4">
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <label class="input-group-text bg-white border-end-0" for="priceSelect">Theo giá</label>
+                        <select class="form-select border-start-0" id="priceSelect">
+                            <option value="default">Không lựa chọn</option>
+                            <option value="lowToHigh">Từ thấp đến cao</option>
+                            <option value="highToLow">Từ cao đến thấp</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Tên sản phẩm" aria-label="Tên sản phẩm" id="searchInput">
+                        <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+               
+        <section class="container product-list">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/banh-mi_67711.png" alt="Bánh mì">
+                        <div class="card-body text-center">
+                            <h5 class="card-title ">Bánh mì</h5>
+                            <p class="card-text">30.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="banhmi" data-name="Bánh mì" data-price="30000" data-image="../img/banh-mi_67711.png">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/panna-cotta-101-16965745230.png" alt="Panna cotta">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Panna cotta</h5>
+                            <p class="card-text">35.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="cotta" data-name="Panna cotta" data-price="35000" data-image="../img/panna-cotta-101-16965745230.png">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/passion-mousse-101-16965745747.png" alt="Passion mousse">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Passion mousse</h5>
+                            <p class="card-text">35.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="passion" data-name="Passion mousse" data-price="35000" data-image="../img/passion-mousse-101-16965745747.png">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/tiramisumini.png" alt="Tiramisu">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">32.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="Tiramisu" data-name="Tiramisu" data-price="32000" data-image="../img/tiramisumini.png">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/ALASKA_01.jpg" alt="Coconut & Strawberry Baked Alaska">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Coconut & Strawberry Baked Alaska</h5>
+                            <p class="card-text">50.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="coconut" data-name="Coconut & Strawberry Baked Alaska" data-price="50000" data-image="../img/ALASKA_01.jpg">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/270_crop_PHOMAICAPHE.jpg" alt="Bánh Phô Mai Cafe">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bánh Phô Mai Cafe</h5>
+                            <p class="card-text">30.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="banhphomaicafe" data-name="Bánh Phô Mai Cafe" data-price="30000" data-image="../img/270_crop_PHOMAICAPHE.jpg">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/270_crop_PHOMAITRAXANH.jpg" alt="Bánh Phô Mai Trà Xanh">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bánh Phô Mai Trà Xanh</h5>
+                            <p class="card-text">35.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="banhphomaitraxanh" data-name="Bánh Phô Mai Trà Xanh" data-price="35000" data-image="../img/270_crop_PHOMAITRAXANH.jpg">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="../img/270_crop_CARAMELPHOMAI.jpg" alt="Bánh Caramel Phô Mai">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bánh Caramel Phô Mai</h5>
+                            <p class="card-text">50.000 đ</p>
+                            <button class="btn btn-order" data-bs-toggle="modal" data-bs-target="#productModal" data-id="caramel" data-name="Bánh Caramel Phô Mai" data-price="50000" data-image="../img/270_crop_CARAMELPHOMAI.jpg">
+                                ĐẶT HÀNG
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>  
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="column">
+                <h5>Giới thiệu</h5>
+                <p>Về Chúng Tôi</p>
+                <p>Sản phẩm</p>
+                <p>Khuyến mãi</p>
+                <p>Tuyển dụng</p>
+            </div>
+            <div class="column">
+                <h5>Điều khoản</h5>
+                <p>Điều khoản sử dụng</p>
+                <p>Chính sách bảo mật thông tin</p>
+                <p>Hướng dẫn xuất hóa đơn GTGT</p>
+                
+            </div>
+            <div class="column">
+                <h5>Liên hệ</h5>
+                <p>Đặt hàng: 0786012569</p>
+                <p>Tầng 1-3 HVH drinks</p>
+                <p>12 Nguyễn Văn Bảo, P.4,</p>
+                <p>Gò vấp, Thành phố Hồ Chí Minh</p>
+            </div>
+            <div class="column">
+                <h5>HVH Drinks</h5>
+                <ul class="social-icons">
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="btn" onclick="scrollToTop()"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: url(../img/bg_modal.png);">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="badge bg-danger">Bán chạy</div>
+                            <div class="badge bg-success">Món mới</div>
+                            <img src="" alt="Sản phẩm" class="img-fluid" id="modalProductImage">
+                            <p id="modalProductPrice" class="text-center"></p>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 id="modalProductName"></h5>
+                            <div class="d-flex align-items-center">
+                                <h6>Số lượng:</h6>
+                                <button class="btn btn-outline-secondary" type="button" id="minusButton">-</button>
+                                <input type="number" id="quantityInput" class="form-control text-center mx-2" value="1" min="1">
+                                <button class="btn btn-outline-secondary" type="button" id="plusButton">+</button>
+                            </div>
+                            <h6>Ghi chú:</h6>
+                            <textarea class="form-control my-3" id="noteTextarea" rows="3" placeholder="Ghi chú"></textarea>
+                            <p id="totalPrice"></p>
+                            <button type="button" class="btn btn-primary">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/selection1.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../../js/loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/chinhsachthanhvien.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Chính sách thành viên</title>
+</head>
+<body>
+    <div class="loader" style="width: 100%;"><p style="position: absolute; z-index: 1111;">Đang loading</p></div>
+    <!-- Header -->
+    <header>
+        <img src="../img/logo.png" alt="Logo">
+        <form class="d-flex" style="position: relative;">
+            <input class="form-control me-2" type="text" placeholder="search" aria-label="Tìm kiếm">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="login">
+            <a href="../../RegularException/html/Index.html"><button class="btn btn-outline-light">Đăng nhập</button></a>
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            
+            <div id="myModal" class="modal modal-lg" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+    
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary "><a href="../../RegularException/html/Checkout.html">Thanh Toán</a></button>
+                    </div>
+                </div>
+            </div>
+            
+    
+        </div>
+    </header>
+    
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-custom bg-warning">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mx-5 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" aria-current="page" href="../../html_duchau/home.html" id="showloader">Trang chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-dark" href="../html/thucuong.html" id="showloader">Drinks</a></li>
+                            <li><a class="dropdown-item text-dark" href="../html/bakery.html" id="showloader">Bakery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tin tức & sự kiện
+                        </a>
+                        <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-dark" href="../../html_duchau/tintuc.html" id="showloader">Tin tức khuyến mãi</a></li>
+                            <li><a class="dropdown-item text-dark" href="../../html_duchau/sukien.html" id="showloader">Sự kiện</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../../html_duchau/tuyendung.html" id="showloader">Tuyển dụng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/gioithieu.html" id="showloader">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/chinhsachthanhvien.html" id="showloader">Chính sách thành viên</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../html/chinhsachbaomatthongtin.html" id="showloader">Chính sách bảo mật thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../../RegularException/html/Contact.html" id="showloader">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-heading" class="text-dark px-5">
+        <div class="container">
+            <h2>Thức uống</h2>
+            <p>Giới thiệu thức uống hấp dẫn và đa dạng</p>
+        </div>
+    </div>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-3" style="background: #b91f32; color: #FFF;">
+            <li class="breadcrumb-item">
+                <a href="../../html_duchau/home.html" class="text-white" style="text-decoration: none;">
+                    <i class="fas fa-home"></i> Trang Chủ
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Thức uống
+            </li>
+        </ol>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>CHÍNH SÁCH THÀNH VIÊN ỨNG DỤNG HVH Drinks VN</h2>
+            <h3>A. ĐIỂM TÍCH LŨY</h3>
+            <p>
+                Chương trình tích điểm thành viên HVH Drinks cho phép bạn tích điểm và chủ động đổi điểm để lấy những ưu đãi, phần quà hấp dẫn từ HVH Drinks. Với mỗi hóa đơn chi tiêu tại cửa hàng, bạn sẽ được tích điểm tương đương với số tiền mà bạn đã thanh toán.
+            </p>
+            <p>Ứng dụng sẽ ghi nhận đồng thời 02 loại điểm, gồm: 
+                <ol>
+                    <li>Điểm xét hạng: Dùng xét hạng thành viên. Quy cách tính điểm: 10,000 vnđ = 1 Lá trà.</li>
+                    <li>Điểm đổi quà: Dùng đổi điểm lấy quà. Quy cách tính điểm: theo bảng bên dưới: 
+                    </li>
+                </ol>
+            </p>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Hạng</th>
+                        <th scope="col">Hệ số Boba</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>E - Member</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Red - Member</td>
+                        <td>1.2</td>
+                    </tr>
+                    <tr>
+                        <td>Gold - Member</td>
+                        <td>1.5</td>
+                    </tr>
+                    <tr>
+                        <td style=" font-style: italic;"><strong>Lưu ý:</strong> Boba đổi quà được nhân hệ số theo hạng thành viên tương ứng</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Bạn có thể chủ động kiểm tra điểm tích lũy tại mục “Hạng thành viên”  hoặc “Boba đổi quà” để biết chính xác số Lá trà hoặc Boba bạn đã tích lũy được và Quyền lợi thành viên mà bạn đang có.</p>
+            <p>Để hiểu rõ hơn về các loại điểm tích lũy trên ứng dụng, bạn vui lòng tham khảo nội dung bên dưới:</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Đặc điểm</th>
+                        <th scope="col">Điểm xét hạng</th>
+                        <th scope="col">Boba đổi quà</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                            <td>E-Member</td>
+                            <td>100.000 vnđ</td>
+                            <td>10 lá trà</td>
+                            <td>10 boba</td>
+                        </tr>
+                        <tr>
+                            <td>Red-Member</td>
+                            <td>100.000 vnđ</td>
+                            <td>10 lá trà</td>
+                            <td>12 boba</td>
+                        </tr>
+                        <tr>
+                            <td>Gold-Member</td>
+                            <td>100.000 vnđ</td>
+                            <td>10 lá trà</td>
+                            <td>15 boba</td>
+                        </tr>
+                </tbody>
+            </table>
+
+            <p>Bạn có thể chủ động kiểm tra điểm tích lũy tại mục <strong><em>“Hạng thành viên”</em></strong>&nbsp; hoặc <strong><em>“Boba đổi quà”</em></strong> để biết chính xác số Lá trà hoặc Boba bạn đã tích lũy được và Quyền lợi thành viên mà bạn đang có.</p>
+
+            <p>Để hiểu rõ hơn về các loại điểm tích lũy trên ứng dụng, bạn vui lòng tham khảo nội dung bên dưới: </p>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><b>Đặc điểm</b></p>
+                        </td>
+                        <td>
+                            <p><b>Điểm xét hạng</b></p>
+                        </td>
+                        <td>
+                            <p><b>Boba đổi quà</b></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            <p><span style="font-weight: 400;">Khác nhau</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Đơn vị tính: Lá trà</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Đơn vị tính: Boba</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">Không nhận hệ số theo hạng thành viên</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Được nhân hệ số theo hạng thành viên</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">Tự động reset theo chu kỳ 365 ngày</span></p>
+                            <p><span style="font-weight: 400;">kể từ ngày nâng/hạ hạng thành viên</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Tự động reset về 0 điểm </span></p>
+                            <p><span style="font-weight: 400;">vào lúc 0:00, ngày 1/1 hàng năm</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">Quy cách tính điểm: </span><b><i>10,000đ = 1 Lá trà</i></b></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Quy cách tính điểm: </span></p>
+                            <p><span style="font-weight: 400;">linh động tùy theo CTKM từng thời điểm</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            <p><span style="font-weight: 400;">Giống nhau</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Trong </span><b><i>12 tháng</i></b><span style="font-weight: 400;"> các tài khoản không phát sinh chi tiêu sẽ bị reset Điểm xét hạng về 0 điểm. Hạ hạng thành viên về E-Member</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Trong </span><b><i>12 tháng</i></b><span style="font-weight: 400;"> các tài khoản không phát sinh chi tiêu sẽ bị reset Boba đổi quà về 0 điểm. Hạ hạng thành viên về E-Member</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">Được cộng dồn khi tích lũy</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">Được cộng dồn khi tích lũy</span></p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                
+                
+                <h2>B. HẠNG THÀNH VIÊN VÀ QUYỀN LỢI THÀNH VIÊN</h2>
+                
+                
+                
+                <p>Ứng dụng có ba hạng mức thành viên với các mức quyền lợi khác nhau. Hạng thành viên được xác định theo số tiền chi tiêu của khách tại hệ thống cửa hàng:&nbsp;</p>
+                
+                
+                <table class="table table-bordered"><tbody><tr><td><strong>Hạng</strong></td><td><strong>Điều kiện tích điểm</strong></td><td><strong>Quyền lợi thành viên</strong></td></tr><tr><td><strong>E &#8211; Member</strong></td><td>Lần đầu đăng kí thành viên trên ứng dụng, bạn sẽ là thành viênE – Member.</td><td>Nhận voucher miễn phí 1 thức uống size M trên menu vào ngày sinh nhật. Ưu đãi áp dụng cho hội viên tích lũy tối thiểu 100 lá trà (tương đương chi tiêu 1.000.000 vnđ) trong tài khoản;<br>Tích lũy Boba để đổi các phần quà hấp dẫn đến từ HVH Drinks;</td></tr><tr><td><strong>Red – Member</strong></td><td>Khi tích đủ <strong>500 lá trà</strong> <strong>(tương đương chi tiêu 5.000.000 vnđ), </strong>bạn sẽ được nâng hạng thành viên thành Red – Member.</td><td>Nhận voucher miễn phí 1 thức uống size M trên menu vào ngày sinh nhật. Ưu đãi áp dụng cho hội viên tích lũy tối thiểu 100 lá trà (tương đương chi tiêu 1.000.000 vnđ) trong tài khoản;<br>Tích lũy Boba để đổi các phần quà hấp dẫn đến từ HVH Drinks; Điểm Boba được nhân hệ số <strong>1,2</strong> khi tích điểm;<br>Các ưu đãi hấp dẫn khác chỉ dành riêng cho hạng Red – Member. (Theo chính sách của HVH Drinks Việt Nam, khách hàng có thể nhận thêm những ưu đãi hoặc quà tặng vào những dịp đặc biệt như Lễ, Tết…)</td></tr><tr><td><strong>Gold – Member</strong></td><td>Khi tích đủ <strong>1500 lá trà (tương đương chi tiêu 15.000.000 vnđ),</strong> bạn sẽ được nâng hạng thành viên thành Gold – Member.</td><td>Nhận voucher miễn phí 1 thức uống size M trên menu vào ngày sinh nhật. Ưu đãi chỉ áp dụng cho hội viên tích lũy tối thiểu 100 lá trà (tương đương chi tiêu 1.000.000 vnđ) trong tài khoản;<br>Tích lũy Boba để đổi các phần quà hấp dẫn đến từ HVH Drinks; Điểm Boba được nhân hệ số <strong>1,5</strong> khi tích điểm;<br>Đặc quyền thưởng thức sản phẩm mới miễn phí;<br>Các ưu đãi hấp dẫn khác chỉ dành riêng cho hạng Gold &#8211; Member. (Theo chính sách của HVH Drinks Việt Nam, khách hàng có thể nhận thêm những ưu đãi hoặc quà tặng vào những dịp đặc biệt như Lễ, Tết…)</td></tr></tbody></table>
+                
+                
+                <h2>C. QUY TẮC XÉT HẠNG THÀNH VIÊN </h2>
+                
+                
+                
+                <p>Hệ thống tự động xét điểm và hạng thành viên theo <strong><em>chu kỳ 365 ngày</em></strong> kể tự ngày xét hạng. Sau quá trình tích lũy điểm, bạn sẽ được nâng hạng thành viên với nhiều ưu đãi đặc biệt hơn tương ứng với từng hạng đạt được.</p>
+                
+                
+                
+                <p>Nếu bạn không tích lũy đủ điểm theo quy định, hệ thống sẽ xét hạng theo bảng quy tắc sau:&nbsp;</p>
+                
+                
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Hạng</strong></td>
+                            <td><strong>Red-Member</strong></td>
+                            <td><strong>Gold-Member</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nâng hạng</strong></td>
+                            <td>Từ E-Member lên Red-Member: Tích đủ <strong>500</strong> lá trà <em>(Tương đương 5.000.000 vnđ)</em></td>
+                            <td>Từ E-Member lên Gold-Member: Tích đủ <strong>1500</strong> lá trà <em>(Tương đương 15.000.000 vnđ)</em><br />Từ Red-Member lên Gold-Member: Tích đủ <strong>1000</strong> lá trà <em>(Tương đương 10.000.000 vnđ)</em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giữ hạng</strong></td>
+                            <td>Trong 365 ngày, tính từ thời điểm lên hạng Red-Member: Tích đủ <strong>500</strong> lá trà <em>(Tương đương chi tiêu từ 5.000.000 vnđ)</em></td>
+                            <td>Trong 365 ngày, tính từ thời điểm lên hạng Gold-Member: Tích đủ <strong>1000</strong> lá trà <em>(Tương đương chi tiêu 10.000.000 vnđ) </em></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hạ hạng</strong></td>
+                            <td>Trong 365 ngày, tính từ thời điểm lên hạng Red-Member: Tích dưới <strong>500</strong> lá trà<em>(Tương đương dưới 5.000.000 vnđ)</em><br />Hạ hạng xuống 1 bậc thấp hơn là E-Member</td>
+                            <td>Trong 365 ngày, tính từ thời điểm lên hạng Gold-Member: Tích dưới <strong>1000</strong> lá trà<em>(Tương đương dưới 10.000.000 vnđ)</em><br />Hạ hạng xuống 1 bậc thấp hơn là Red-Member</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>Hạng thành viên sẽ thay đổi theo số lá trà mà bạn tích lũy cho đến ngày xét hạng, mỗi tài khoản sẽ có ngày xét hạng khách nhau, theo quy tắc 365 ngày kể từ ngày nâng/hạ hạng thành viên; Nếu bạn không tích lũy thêm lá trà nào, hạng thành viên của bạn sẽ quay trở về hạng thấp nhất là E-Member. Sau khi bị hạ hạng, bạn vẫn có thể tiếp tục tích lũy điểm để được nâng hạng như bình thường.</p>               
+                <h2>D. THAY ĐỔI THÔNG TIN THÀNH VIÊN TRÊN ỨNG DỤNG</h2>               
+                <p>Với các thông tin bắt buộc cung cấp nhưng không thể tự thay đổi trên ứng dụng như ngày tháng năm sinh, bạn vui lòng liên hệ đến&nbsp;Hotline HVH Drinks Việt Nam:&nbsp;0123456789&nbsp;hoặc gửi tin nhắn đến&nbsp;Fanpage HVH Drinks Vietnam&nbsp;để được hỗ trợ.&nbsp;</p>
+                <p><em>Công ty TNHH HVH Drinks Việt Nam có quyền thay đổi hay sửa chữa các điều khoản liên quan đến chương trình thành viên mà không cần báo trước. Mọi thay đổi sẽ được thông báo chính thức trên website: <a href="">hvhdrinks.com.vn</a>.</em></p>
+        </div>
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="column">
+                <h5>Giới thiệu</h5>
+                <p>Về Chúng Tôi</p>
+                <p>Sản phẩm</p>
+                <p>Khuyến mãi</p>
+                <p>Tuyển dụng</p>
+            </div>
+            <div class="column">
+                <h5>Điều khoản</h5>
+                <p>Điều khoản sử dụng</p>
+                <p>Chính sách bảo mật thông tin</p>
+                <p>Hướng dẫn xuất hóa đơn GTGT</p>
+                
+            </div>
+            <div class="column">
+                <h5>Liên hệ</h5>
+                <p>Đặt hàng: 0786012569</p>
+                <p>Tầng 1-3 HVH drinks</p>
+                <p>12 Nguyễn Văn Bảo, P.4,</p>
+                <p>Gò vấp, Thành phố Hồ Chí Minh</p>
+            </div>
+            <div class="column">
+                <h5>HVH Drinks</h5>
+                <ul class="social-icons">
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="btn" onclick="scrollToTop()"></button>
+        
+    <script src="../js/scrollToTop.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../../js/loader.js"></script>
+</body>
+</html>
